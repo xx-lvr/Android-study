@@ -3,7 +3,7 @@ Lifecycle은 Life + cycle의 합성어로, 삶의 순환이라고 직역할 수 
 말 그대로 탄생하고 성장하여 죽음에 이르기까지의 과정이라고 생각한다면, 이것을 안드로이드 앱에 적용한 것이 바로 Android Lifecycle
 
 ## Activity Lifecycle
-![Activity LifeCycle](image/image.png)
+![image](image.png)
 + 위 사진은 안드로이드 4대 컴포넌트 중 하나인 Activity의 Lifecycle 순서도이다.
 
 ## 핵심 콜벡 매소드
