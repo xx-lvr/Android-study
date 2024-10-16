@@ -14,7 +14,7 @@ Lifecycle은 Life + cycle의 합성어로, 삶의 순환이라고 직역할 수 
 + onStop()
 + onDestroy()
 ## onCreate()
-+ Activity가 생성되면 가장 먼저 호출됨\
++ Activity가 생성되면 가장 먼저 호출됨
 + 화면 Layout 정의, View 생성, Databinding 등은 이곳에 구현함
 생명주기 통틀어서 단 한 번만 수행되는 메소드
 + 따라서 Activity 최초 실행에 해야하는 작업을 수행하기에 적합함
