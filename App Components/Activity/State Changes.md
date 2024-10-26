@@ -1,5 +1,6 @@
 ## State Changes
-**State Changes즉 활동 상태 변경!**\
+**State Changes즉 활동 상태 변경!**
+
 일부 사용자에 의해 트리거되고 일부 시스템에 의해 트리거되는 다양한 이벤트로 인해 Activity가 한 상태에서 다른 상태로 전환될 수 있는 것이다.
 
 ## Configuration change occurs(구성변경)
@@ -21,7 +22,8 @@
 
 + onCreate()
 + onStart()
-+ onResume()\
++ onResume()
+
 + ViewModel 인스턴스, onSaveInstanceState() 메서드 또는 영구 로컬 저장소를 조합하여 모든 구성 변경 시 활동의 UI 상태를 보존해야한다.
 
  이러한 옵션을 조합하는 방법은 UI 데이터의 복잡성, 앱 사용 사례 및 메모리 사용량 대비 검색 속도를 고려하여 결정해야 한다.
