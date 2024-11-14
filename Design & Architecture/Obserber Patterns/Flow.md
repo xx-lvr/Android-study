@@ -43,8 +43,19 @@ Flow는 Flow가 생성되는 부분이 아니라 Flow가 소비되는 부분에�
 ```kotlin
 flow { emit("Hello")} // 생산자
     .onEach { println(it)} // 중간 연산자
-    .onStart { println("Do something before")} // 중간 연산자
-    .onCompletion { println("Do something after")} // 중간 연산자
+    .onStart { println("Do something before")} 
+    // 중간 연산자
+    .onCompletion { println("Do something after")} 
+    // 중간 연산자
     .catch { emit("Error")} // 중간 연산자
     .collect{ println("Collected : $it")} // 최종 연산자
 ```
+
+## LiveData와 Flow?
+반응형 프로그래밍(Reactive Programming)\
+데이터의 변화에 따라 자동으로 이벤트를 발생시키고 이를 소비자에게 **지속적으로 전달**하는 프로그래밍
+
+데이터를 발생시키는 **발행자**가 있고 소비자는 발행자를 **구독**하는 형태로 구성 새로운 데이터가 들어오면 데이터를 소비자에게 지속적으로 발행
+
+Data. Domain Layer에서의 LiveData 사용을 지양, UI Layer가 아닌 다른 계층에서 데이터 스트림을 사용해야 한다면 **Flow**를 사용
++ viewModel에서 LiveData로 변환하여 UI에서 쉽게 사용 가능하다 -asLiveData()
