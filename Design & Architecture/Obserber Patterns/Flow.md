@@ -16,4 +16,35 @@ Flow는 비동기적으로 동작하는 **데이터 스트림**으로, 순차적
 **예시:** Sequence / RxJava / **Flow**
 
 ![alt text](image.png)
-Flow는 Flow가 생성되는 부분이 아니라 Flow가 소비되는 부분에서 출력 
+Flow는 Flow가 생성되는 부분이 아니라 Flow가 소비되는 부분에서 출력\
+소비자가 **collect**로 데이터를 수집하기 전까지는 데이터를 생산하지 않는다.
+
+## 비동기 (Asynchronus)
+코루틴과 결합하여 비동기적으로 데이터 흐름을 유연하게 관리 가능
+### 👌비동기 데이터 흐름을 나타내는 객체
++ Flow를 반환하는 함수에는 비동기 작업을 수행하고 있음에도 **suspend**가 붙지 않는다
++ Flow가 수집되기 전까지는 어떠한 비동기 작업도 **수행되지 않는다**
++ 데이터를 어떻게 생산할지 **정의**하는 역할
+### 👌구조적 동시성 (Structured Concurrency) 지원
++ collect는 **suspend 함수**로 구현되어 있기 때문에 **코루틴**내에서 호출 되어야 한다.
++ collect 함수 호출 시 Flow 내부에 있는 비동기 작업이 실행 된다.
++ Flow는 **호출된 스코프 내**에서 실행. 관리 된다.
++ Flow가 실행되는 코루틴이 취소될 때 Flow에 의해 실행된 모든 자원들이 자동으로 정리된다.
+
+## Flow의 구조
+![alt text](image-1.png)
+**최종 연산자**: 값을 소비하는 유일한 방법, Flow의 데이터를 최종적으로 소비하는 중요한 역할\
+**중간 연산자**: Flow의 데이터 스트림을 여러 단계에 걸쳐 조작할 수 있는 API 제공
++ suspend 함수 호출 가능
++ 다양한 연산자들과 결합해 복잡한 데이터를 간결하고 효율적으로 처리
+
+**생산자** : 앞에서 봤던 Flowbuilder가 속해있다. 안드로이드 내에서는 해당라이브러리에서 flow반환형을 지원하고 있어서 실질적으로 Flowbuilder를 사용하는 일은 적음
+
+```kotlin
+flow { emit("Hello")} // 생산자
+    .onEach { println(it)} // 중간 연산자
+    .onStart { println("Do something before")} // 중간 연산자
+    .onCompletion { println("Do something after")} // 중간 연산자
+    .catch { emit("Error")} // 중간 연산자
+    .collect{ println("Collected : $it")} // 최종 연산자
+```
