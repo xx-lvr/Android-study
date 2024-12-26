@@ -39,3 +39,11 @@ lateinit var cc: CC
 
 1. Interface는 생성자 개념이 없으므로 불가능하다
 2. 서드파티 라이브러리 등의 클래스는 참조가 불가능하여 annotation프로세싱이 불가능하다
+
+## Module
+
+## Component
+
+## SubComponent
+
+## Scope
