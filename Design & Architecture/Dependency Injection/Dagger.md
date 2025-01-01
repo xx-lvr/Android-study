@@ -44,10 +44,20 @@ lateinit var cc: CC
 
 **Component**에 연결되어 의존성 객체를 생성하는 역할이다. 생성 후 Scope에 따라 객체를 관리도 한다.
 
-**Module**은 클래스에만 붙이고, **Provides**는 반드시 **Module** 클래스에 선언된 메서드에만 사용한다.
+```@Module```은 클래스에만 붙이고,```@Provides```는 반드시 **Module** 클래스에 선언된 메서드에만 사용한다.
 
-**Module 클래스**는 의존성 주입에 필요한 객체들을 **Provide**, **Binds** 메서드를 통해 관리합니다.
+**Module 클래스**는 의존성 주입에 필요한 객체들을```@Provide```, ```@Binds``` 메서드를 통해 관리한다.
 
+```kotlin
+@Module
+class Module_A {
+    @Provides
+    fun provideAA() : AA = AA()	// AA 객체(인스턴스)를 Component에게 제공
+
+    @Provides
+    fun provideBB(aa: AA) : BB = BB(aa) // 필요한 인자(AA)를 Component로 부터 전달받아 BB 객체를 생성해서 Component에게 제공
+}
+```
 ## Component
 
 ## SubComponent
