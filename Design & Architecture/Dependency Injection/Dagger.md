@@ -64,7 +64,7 @@ class Module_A {
 컴파일 타임에 접두어 **'Dagger'**와 **Component** 클래스 이름이 합쳐진 **Dagger**클래스 자동생성\
 (ex : ```@Component interface MyComponent``` -> ```DaggerMyComponent``` 클래스 생성)
 
-연결된 **Module**을 이용하여 의존성 객체를 생성하고, **Inject**로 요청받은 인스턴스에 생성한 객체를 전달(주입)합니다
+연결된 **Module**을 이용하여 의존성 객체를 생성하고, **Inject**로 요청받은 인스턴스에 생성한 객체를 전달(주입)한다
 
 의존성을 요청받고 전달(주입)하는 **Dagger**의 주된 역할을 수행하는 부분
 
