@@ -70,4 +70,12 @@ class Module_A {
 
 ## SubComponent
 
+```SubComponent```는 말 그대로 부모 **Component**가 있는 자식 **Component**라고 보면 된다. 
+
+**Inject**로 의존성 주입을 요청받으면 **SubComponent**에서 먼저 ```의존성```을 검색하고, 없으면 부모로 올라가면서 검색한다
+
+**SubComponent**는 **Component**와 달리 코드 생성은 부모 ```Component```에서 이루어 진다다.
+
+**SubComponent**는 **Component**와 마찬가지로 **interface** 또는 **abstract class**에 **@SubComponent** 에노테이션으로 생성
+
 ## Scope
