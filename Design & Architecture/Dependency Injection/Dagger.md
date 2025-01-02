@@ -79,3 +79,7 @@ class Module_A {
 **SubComponent**는 **Component**와 마찬가지로 **interface** 또는 **abstract class**에 **@SubComponent** 에노테이션으로 생성
 
 ## Scope
+
+**Component**   별로 ```@Scope``` **annotation**으로 주입되는 객체들을 관리한다
+
+생성된 객체의 ```Lifecycle``` 범위입니다. 안드로이드는 주로 **PerActivity**, **PerFragment** 등으로 하면의 생명주기와 맞춰서 사용한다.
