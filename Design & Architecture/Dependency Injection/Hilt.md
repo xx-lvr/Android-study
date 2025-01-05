@@ -17,3 +17,13 @@ Hilt는 Dagger를 기반으로 빌드되어 Dagger를 Android 애플리케이션
 + ```@ApplicationContext``` 및 ```@ActivityContext```를 나타내는 **사전 정의된 한정자**
 
 ## Hilt 종속 항목 추가
+```kotlin
+buildscript {
+    ...
+    dependencies {
+        ...
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.38.1'
+    }
+}
+```
+hilt-android-gradle-plugin 플러그인을 **프로젝트의 루트(프로젝트 레벨) build.gradle 파일에 추가**
