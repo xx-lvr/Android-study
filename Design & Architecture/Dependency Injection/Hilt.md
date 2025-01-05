@@ -27,3 +27,20 @@ buildscript {
 }
 ```
 hilt-android-gradle-plugin 플러그인을 **프로젝트의 루트(프로젝트 레벨) build.gradle 파일에 추가**
+```
+...
+plugins {
+  id 'kotlin-kapt'
+  id 'dagger.hilt.android.plugin'
+}
+
+android {
+    ...
+}
+
+dependencies {
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-compiler:2.38.1"
+}
+```
+ app 레벨에서 또한 종속성을 추가
