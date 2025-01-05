@@ -16,4 +16,4 @@ Hilt는 Dagger를 기반으로 빌드되어 Dagger를 Android 애플리케이션
 + Application 또는 Activity와 같은 Android 클래스를 나타내는 **사전 정의된 결합**
 + ```@ApplicationContext``` 및 ```@ActivityContext```를 나타내는 **사전 정의된 한정자**
 
-##
+## Hilt 종속 항목 추가
