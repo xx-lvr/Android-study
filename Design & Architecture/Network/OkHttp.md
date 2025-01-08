@@ -7,3 +7,35 @@
 + **Okio와**와 **코틀린**으로 구성되어있다.
 + **Connection pooling**과 **Redirection**을 도입해 더 안정적이고 개선된 속도로 HTTP 통신을 가능하게 한한다.
 + OkHttp는 통신을 동기화로할지 비동기 처리로할지 선택할 수 있다, 하지만 스레드를 넘나들 수 없으므로 Handler를 사용한다.
+
+## 예시
+```kotlin
+// Get URL
+OkHttpClient client = new OkHttpClient();
+
+String run(String url) throws IOException {
+  Request request = new Request.Builder()
+      .url(url)
+      .build();
+
+  try (Response response = client.newCall(request).execute()) {
+    return response.body().string();
+  }
+}
+
+// Post to a Server
+public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
+
+OkHttpClient client = new OkHttpClient();
+
+String post(String url, String json) throws IOException {
+  RequestBody body = RequestBody.create(json, JSON);
+  Request request = new Request.Builder()
+      .url(url)
+      .post(body)
+      .build();
+  try (Response response = client.newCall(request).execute()) {
+    return response.body().string();
+  }
+}
+```
