@@ -30,3 +30,19 @@ fun getUserOuth(
     @Query("pw") user_pw: String
 ):Call<UserCredentail>
 ```
+
+## Path Parameter
+Query parameter와 다르게 경로 자체를 변수로써 사용한다.
+```kotlin
+GET /users/1234
+```
+```kotlin
+// @Path 어노테이션 사용
+@GET("user/{id}/{pw}")
+fun getUserOuth(
+	@Path("id") user_id: String, 
+    @Path("pw") user_pw: String
+):Call<UserCredentail>
+```
+
+#### GET 및 POST 어노테이션의 ()안에는 요청주소의 엔드포인트를 작성해야한다.
