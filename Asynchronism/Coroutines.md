@@ -9,3 +9,11 @@
 + **내장된 취소 지원**: 취소 실행 중인 코루틴 계층 구조를 통해 자동으로 전파된다.
 
 + **Jetpack 통합**: 많은 Jetpack 라이브러리에 코루틴을 완전히 지원하는 확장 프로그램이 포함되어 있다. 일부 라이브러리는 구조화된 동시 실행에 사용할 수 있는 자체 코루틴 범위도 제공한다.
+
+### 종속 항목
+코루틴을 사용하려면 앱의 build.gradle 파일에 종속 항목을 추가해야한다.
+```kotlin
+dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+} 
+```
