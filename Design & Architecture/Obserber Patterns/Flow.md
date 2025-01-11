@@ -61,4 +61,5 @@ flow { emit("Hello")} // 생산자
 데이터를 발생시키는 **발행자**가 있고 소비자는 발행자를 **구독**하는 형태로 구성 새로운 데이터가 들어오면 데이터를 소비자에게 지속적으로 발행
 
 Data. Domain Layer에서의 LiveData 사용을 지양, UI Layer가 아닌 다른 계층에서 데이터 스트림을 사용해야 한다면 **Flow**를 사용
-+ viewModel에서 LiveData로 변환하여 UI에서 쉽게 사용 가능하다 -asLiveData()
++ viewModel에서 LiveData로 변환하여 UI에서 쉽게 사용 가능하다\
+-asLiveData()
