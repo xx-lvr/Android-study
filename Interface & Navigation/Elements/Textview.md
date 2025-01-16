@@ -22,4 +22,4 @@ Android View 시스템의 ```TextView```는 Compose 에서 ```Text```로 쓰여�
  )
 ```
 
-+ 개인적으로 Compose가 더 좋은 듯
++ 개인적으로 ```Jetpack Compose```가 더 좋은 듯
