@@ -13,7 +13,7 @@ Android View 시스템의 ```TextView```는 Compose 에서 ```Text```로 쓰여�
 + Compose에서의 코드
 ```kotlin
  Text(
-        text = "나의 랭킹은...",
+        text = "TextView",
         style = TextStyle(
          fontSize = 16.sp,
          fontWeight = FontWeight(700),
