@@ -10,7 +10,7 @@ Android View 시스템의 ```TextView```는 Compose 에서 ```Text```로 쓰여�
         android:layout_height="wrap_content"
         android:text="TextView" />
 ```
-+ ```Compose```에서의 코드
++ ```Jetpack Compose```에서의 코드
 ```kotlin
  Text(
         text = "TextView",
