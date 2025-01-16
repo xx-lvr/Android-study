@@ -2,7 +2,7 @@
 Android View 시스템의 ```TextView```는 Compose 에서 ```Text```로 쓰여진다
 
 ## 예제코드
-+ xml에서의 코드
++ ```xml```에서의 코드
 ```kotlin
  <TextView
         android:id="@+id/textView6"
@@ -10,7 +10,7 @@ Android View 시스템의 ```TextView```는 Compose 에서 ```Text```로 쓰여�
         android:layout_height="wrap_content"
         android:text="TextView" />
 ```
-+ Compose에서의 코드
++ ```Compose```에서의 코드
 ```kotlin
  Text(
         text = "TextView",
