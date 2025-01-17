@@ -4,12 +4,12 @@ Kotlin 코루틴 및 Flow를 사용하여 비동기적이고 일관된 트랜잭
 ## 종속 항목 선언
 DataStore의 종속 항목을 추가하려면 프로젝트에 Google Maven 저장소를 추가 해야 한다.
 
-DataStore는 Preferences와 Proto 두 가지 방식을 통해 구현이 가능하다.
+DataStore는 Preferences DataStore과 Proto DataStore 두 가지 방식을 통해 구현이 가능하다.
 
 ## Preferences DataStore
 ```Kotlin
  // Preferences DataStore (SharedPreferences like APIs)
-    dependencies {
+    dependencie"? bgt6ts {
         implementation("androidx.datastore:datastore-preferences:1.1.1")
 
         // optional - RxJava2 support
