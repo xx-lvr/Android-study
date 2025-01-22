@@ -45,3 +45,9 @@ DataStore는 Preferences DataStore과 Proto DataStore 두 가지 방식을 통�
         implementation("androidx.datastore:datastore-core:1.1.1")
     }
 ```
+
+## DataStore 올바르게 사용하는 규칙
+1. 같은 프로세스에서 특정 파일의 DataStore 인스턴스를 두 개 이상 만들지 않는다.
+2. DataStore의 일반 유형은 변경 불가능해야 한다.
+3. 동일한 파일에서 SingleProcessDataStore와 MultiProcessDataStore를 함께 사용하지 않는다.
++ 두개 이상의 프로세스에서 DataStore에 엑세스 하려면 MultiProcessDataStore를 사용해라
