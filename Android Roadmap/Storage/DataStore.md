@@ -7,6 +7,7 @@ DataStore의 종속 항목을 추가하려면 프로젝트에 Google Maven 저�
 DataStore는 Preferences DataStore과 Proto DataStore 두 가지 방식을 통해 구현이 가능하다.
 
 ## Preferences DataStore
+ 키를 사용하여 데이터를 저장하고 데이터에 액세스한다. 구현은 유형 안전성을 제공하지 않으며 사전 정의된 스키마가 필요하지 않다.
 ```Kotlin
  // Preferences DataStore (SharedPreferences like APIs)
     dependencie"? bgt6ts {
@@ -26,6 +27,7 @@ DataStore는 Preferences DataStore과 Proto DataStore 두 가지 방식을 통�
 ```
 
 ## Proto DataStore
+맞춤 데이터 유형의 인스턴스로 데이터를 저장한다. 이 구현은 유형 안전성을 제공하며 프로토콜 버퍼를 사용하여 스키마를 정의해야 한다
 ```Kotlin
     // Typed DataStore (Typed API surface, such as Proto)
     dependencies {
