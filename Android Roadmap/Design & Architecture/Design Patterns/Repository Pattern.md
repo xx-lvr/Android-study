@@ -1,7 +1,7 @@
 ## Repository Pattern
 Data의 출처에 관계 없이 동일한 인터페이스로 데이터에 접근할 수 있도록 하는 패턴. 즉, **DataSource를 캡슐화 시킨다**
 
-![alt text](image.png)
+[text](<Repository Pattern.md>)
 ViewModel에서 직접 Data에 접근하여 데이터를 가져오는 것이 아니라, **ViewModel에서는 Repository만 접근** 을 하게 된다.
 Repository에서 Remote Data인지 Local Data인지 필요한 데이터를 가져와 ViewModel에게 전달한다.
 
