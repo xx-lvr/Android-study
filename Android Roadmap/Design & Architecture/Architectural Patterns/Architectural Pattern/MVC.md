@@ -1,7 +1,7 @@
 ## MVC
 MVC는 ```Model```, ```View```, ```Controller``` 의 약자이다.
 
-![alt text](image1.png)
+![alt text](../../../Image/mvc.png)
 
 구조를 표현한 사진이다.
 + 그림을 보면 View와 Model은 서로 분리되어 있는 것을 볼 수 있다.

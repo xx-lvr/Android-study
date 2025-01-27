@@ -10,8 +10,7 @@ MVP는 Model View Presenter의 약자로 MVC패턴을 패턴을 기반으로 하
 
 ### Presenter
 View와 Model 사이 중개자 역할을 담당한다다. View에서 사용자 이벤트를 전달 받아 Model에 데이터를 요청하고 전달받은 데이터를 View에 그대로 전달 합니다. ( MVVM의 ViewModel과 비교했을때 ViewModel은 View를 알지 못하고 View에 대한 참조를 가지고 있지 않다. 하지만 Presenter는 View와 Model 모두 참조 하고있다)
-
-![alt text](image-1.png)
+![alt text](../../../Image/mvp.png)
 
 위에 있는 사진을 보면 Model-View-Presenter의 각각 어떤 역할을 하는지 더 잘 알게 된다.
 

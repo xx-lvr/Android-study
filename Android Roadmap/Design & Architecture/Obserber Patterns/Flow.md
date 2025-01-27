@@ -16,7 +16,7 @@ Flow는 비동기적으로 동작하는 **데이터 스트림**으로, 순차적
 **Cold Stream🥶:** 데이터 **요청이 있을 때만** 작업 수행 소비자가 구독할 때 데이터 생산 시작 각각 독립적인 데이터 제공\
 **예시:** Sequence / RxJava / **Flow**
 
-![alt text](image.png)
+![alt text](../../Image/flow.png)
 Flow는 Flow가 생성되는 부분이 아니라 Flow가 소비되는 부분에서 출력\
 소비자가 **collect**로 데이터를 수집하기 전까지는 데이터를 생산하지 않는다.
 
@@ -33,8 +33,7 @@ Flow는 Flow가 생성되는 부분이 아니라 Flow가 소비되는 부분에�
 + Flow가 실행되는 코루틴이 취소될 때 Flow에 의해 실행된 모든 자원들이 자동으로 정리된다.
 
 ## Flow의 구조
-![alt text](image-1.png)
-
+![alt text](../../Image/flow_1.png)
 
 **최종 연산자**: 값을 소비하는 유일한 방법, Flow의 데이터를 최종적으로 소비하는 중요한 역할\
 **중간 연산자**: Flow의 데이터 스트림을 여러 단계에 걸쳐 조작할 수 있는 API 제공

@@ -21,7 +21,7 @@ View와 Model 사이에서 중재자 역할을 수행합니다.
 + View에 표시할 데이터를 가공하여 제공하는 역할을 수행.
 
 ## MVVM 동작 과정
-![alt text](image.png)
+![alt text](../../../Image/mvvm.png)
 ```
 1. 사용자의 Action들은 View를 통해 들어온다.
 2. View에 Action이 들어오면 ViewModel에 Action을 전달한다.
