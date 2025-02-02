@@ -17,3 +17,27 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
 } 
 ```
+
+## 코루틴 예외 처리
+코루틴에서 발생하는 에러는 ```try-catch``` 블록으로 처리할 수 있다. 코루틴 스코프의``` CoroutineExceptionHandler```를 사용하면 모든 코루틴에서 발생하는 예외를 한 번에 처리할 수도 있다.
+```kotlin
+class LoginViewModel(
+    private val loginRepository: LoginRepository
+): ViewModel() {
+
+    fun login(username: String, token: String) {
+        viewModelScope.launch {
+            val jsonBody = "{ username: \"$username\", token: \"$token\"}"
+            val result = try {
+                loginRepository.makeLoginRequest(jsonBody)
+            } catch(e: Exception) {
+                Result.Error(Exception("Network request failed"))
+            }
+            when (result) {
+                is Result.Success<LoginResponse> -> // Happy path
+                else -> // Show error in UI
+            }
+        }
+    }
+}
+```
