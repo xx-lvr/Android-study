@@ -5,7 +5,7 @@
 
 ## 특징
 + **Okio와**와 **코틀린**으로 구성되어있다.
-+ **Connection pooling**과 **Redirection**을 도입해 더 안정적이고 개선된 속도로 HTTP 통신을 가능하게 한한다.
++ **Connection pooling**과 **Redirection**을 도입해 더 안정적이고 개선된 속도로 HTTP 통신을 가능하게 한다.
 + OkHttp는 통신을 동기화로할지 비동기 처리로할지 선택할 수 있다, 하지만 스레드를 넘나들 수 없으므로 Handler를 사용한다.
 
 ## 예시
